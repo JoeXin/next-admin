@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     -  name: checkout respository
+      - name: checkout respository
         uses: actions/checkout@v2
 
         # 安装 pnpm
