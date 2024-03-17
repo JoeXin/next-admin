@@ -19,6 +19,6 @@ pnpm dev
 ```
 
 
-### 许可证
+### 许可证 
 
 Next-admin 使用[MIT](https://opensource.org/license/MIT)协议开源
