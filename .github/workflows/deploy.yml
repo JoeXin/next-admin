@@ -16,7 +16,7 @@ jobs:
        with: 
          node-version: '18.18.0'
     - name: Install
-      run: pnpm i
+      run: pnpm install --no-frozen-lockfile
     - name: build
       run: pnpm --filter ./apps/admin build
     - name: Deploy 🚀
