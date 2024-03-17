@@ -1,0 +1,28 @@
+name: build and test
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    -  name: checkout respository
+       uses: actions/checkout@v2
+    -  name:  setup node.js
+       uses: actions/setup-node@v2
+       with: 
+         node-version: '18.18.0'
+    # 安装 pnpm
+    - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+    - name: build
+      run: pnpm --filter ./apps/admin build
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages 
+        FOLDER: dist

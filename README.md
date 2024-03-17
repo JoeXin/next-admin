@@ -1,33 +1,24 @@
-# `Turborepo` Vite starter
+#  next-admin后台管理系统
 
-This is an official starter Turborepo.
 
-## Using this example
+## 简介
 
-Run the following command:
+next-admin是一款免费开源的后台模板，使用最新的vue3,vite,ts等主流技术开发，开箱即用的中后台前端解决方案，也可以用于学习参考:
+
++ 项目仓库地址：https://joexin.cn/Next-admin
+
+## 安装
 
 ```sh
-npx create-turbo@latest -e with-vite
+git clone https://joexin.github.com/next-admin
+
+pnpm i
+
+pnpm dev
+
 ```
 
-## What's inside?
 
-This Turborepo includes the following packages and apps:
+### 许可证
 
-### Apps and Packages
-
-- `docs`: a vanilla [vite](https://vitejs.dev) ts app
-- `web`: another vanilla [vite](https://vitejs.dev) ts app
-- `@repo/ui`: a stub component & utility library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: shared `eslint` configurations
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+Next-admin 使用[MIT](https://opensource.org/license/MIT)协议开源
