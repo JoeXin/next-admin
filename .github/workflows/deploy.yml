@@ -19,8 +19,6 @@ jobs:
          node-version: '18.18.0'
     - name: Install
       run: pnpm i
-      with:
-          version: 7
     - name: build
       run: pnpm --filter ./apps/admin build
     - name: Deploy 🚀
