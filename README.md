@@ -5,7 +5,7 @@
 
 next-admin是一款免费开源的后台模板，使用最新的vue3,vite,ts等主流技术开发，开箱即用的中后台前端解决方案，也可以用于学习参考:
 
-+ 项目仓库地址：https://joexin.cn/Next-admin
++ 项目仓库地址：https://joexin.cn/next-admin
 
 ## 安装
 
