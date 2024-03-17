@@ -7,31 +7,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -  name: checkout respository
-        uses: actions/checkout@v2
-
-        # 安装 pnpm
-      -  name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
+    -  name: checkout respository
+       uses: actions/checkout@v2
+    -  name:  Setup pnpm
+       uses: pnpm/action-setup@v2
+       with: 
+         version: '7'
+    - name: Setup node
+      run: actions/setup-node@v3
+      with:
+          node-version: '20.x'
+          cache: 'pnpm'
+    - name: Install
+      run: pnpm i
+      with:
           version: 7
-
-        # 安装 node
-      -  name: Setup node
-        uses: actions/setup-node@v3
-        with:
-            node-version: '20.x'
-            cache: 'pnpm'
-        # 安装 
-      -  name: Install
-        uses: pnpm i
-        with:
-            version: 7
-      -  name: build
-        run: pnpm --filter ./apps/admin build
-      -  name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@releases/v3
-        with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          BRANCH: gh-pages 
-          FOLDER: dist
+    - name: build
+      run: pnpm --filter ./apps/admin build
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        BRANCH: gh-pages 
+        FOLDER: dist
