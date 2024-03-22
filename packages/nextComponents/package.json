@@ -1,0 +1,11 @@
+{
+    "name": "@nextComponents",
+    "version": "0.0.1",
+    "exports": {
+        ".": "./index.ts"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "typescript": "latest"
+    }
+}
