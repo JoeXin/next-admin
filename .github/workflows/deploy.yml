@@ -21,7 +21,7 @@ jobs:
       run: pnpm --filter ./apps/admin build
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
-      with:
+      with: 
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages 
         FOLDER: ./apps/admin/dist
